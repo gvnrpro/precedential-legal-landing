@@ -10,12 +10,12 @@ All colors MUST be HSL.
 @layer base {
   :root {
     /* Core Brand Colors */
-    --background: 0 0% 99%;
-    --foreground: 215 25% 15%;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 7%;
     
     /* Legal Brand Palette */
-    --legal-primary: 220 15% 20%;
-    --legal-accent: 217 91% 25%;
+    --legal-primary: 0 0% 7%;
+    --legal-accent: 222 44% 15%;
     --legal-soft: 210 20% 96%;
     --legal-muted: 210 10% 65%;
 
@@ -116,5 +116,18 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  
+  /* Sticky CTA for mobile */
+  @media (max-width: 768px) {
+    .sticky-cta {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 50;
+      box-shadow: 0 10px 30px -5px rgba(26, 26, 47, 0.3);
+    }
   }
 }

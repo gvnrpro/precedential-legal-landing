@@ -22,19 +22,19 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-legal-soft">
       {/* Hero Section */}
-      <section className="relative px-6 py-20 md:py-32 max-w-6xl mx-auto">
+      <section className="relative px-6 py-20 md:py-32 max-w-6xl mx-auto bg-white">
         <div className="max-w-3xl">
-          <p className="text-legal-muted text-sm font-medium uppercase tracking-wider mb-4">
+          <p className="text-legal-muted text-sm font-medium uppercase tracking-wider mb-6">
             A smarter way to access law.
           </p>
-          <h1 className="text-4xl md:text-6xl font-bold text-legal-primary mb-6 leading-tight">
+          <h1 className="text-5xl md:text-7xl font-bold text-legal-primary mb-8 leading-tight">
             Unlimited Legal Support for{' '}
             <span className="text-legal-accent">AED 5,000/month</span>
           </h1>
-          <p className="text-xl md:text-2xl text-legal-muted mb-12 leading-relaxed">
+          <p className="text-xl md:text-2xl text-legal-muted mb-16 leading-relaxed">
             No hourly billing. No uncertainty. Just clarity.
           </p>
-          <Button variant="cta" size="lg" className="text-lg px-8 py-6">
+          <Button variant="cta" size="lg" className="text-lg px-8 py-6 sticky-cta md:relative">
             Get Started
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
