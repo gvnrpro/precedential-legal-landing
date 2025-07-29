@@ -275,32 +275,36 @@ const Index = () => {
           <Accordion type="single" collapsible className="space-y-4">
             {[
               {
-                question: "How does the unlimited legal support work?",
-                answer: "Our subscription model provides you with unlimited access to our legal team for business-related matters. You can submit as many requests as needed within the scope of our services for one fixed monthly fee."
+                question: "What services are included in the monthly subscription fee?",
+                answer: "Contract creation, reviews, amendments, and scheduled legal advisory calls."
               },
               {
-                question: "What types of businesses do you work with?",
-                answer: "We work with businesses of all sizes across the UAE, from startups to established enterprises. Our services are designed to support various industries and business structures."
+                question: "Can I submit unlimited requests?",
+                answer: "Yes, you may submit as many contract or legal support requests as needed."
               },
               {
-                question: "How quickly can I expect responses to my legal requests?",
-                answer: "We pride ourselves on rapid response times. Most inquiries receive an initial response within 24 hours, with more complex matters receiving detailed attention based on urgency and complexity."
+                question: "What is the typical turnaround time?",
+                answer: "Most requests are completed within 1–3 business days, depending on complexity."
               },
               {
-                question: "Can I cancel my subscription at any time?",
-                answer: "Yes, our subscription service offers flexibility. You can cancel with appropriate notice as outlined in our terms of service. We believe in earning your business every month."
+                question: "Can you represent me in court?",
+                answer: "No, we focus exclusively on corporate and commercial legal support, not litigation."
               },
               {
-                question: "Are you qualified to practice law in the UAE?",
-                answer: "Absolutely. Our legal team consists of qualified lawyers licensed to practice in the United Arab Emirates, with deep knowledge of local business law and regulations."
+                question: "What types of contracts are not covered by the subscription?",
+                answer: "Complex agreements like M&A, shareholder agreements, and franchise deals are excluded from the base plan."
               },
               {
-                question: "What happens if I need services not included in my subscription?",
-                answer: "For matters outside our subscription scope, we can discuss alternative arrangements or refer you to specialized practitioners. We'll always be transparent about what's included in your subscription."
+                question: "Can I schedule a legal consultation?",
+                answer: "Yes. Clients may schedule consultations as part of their subscription."
               },
               {
-                question: "How do I get started with Precedential.Legal?",
-                answer: "Simply click our 'Get Started' button to fill out our intake form. We'll review your needs and set up an initial consultation to onboard you to our service."
+                question: "Do you offer one-time legal support?",
+                answer: "If you need legal support outside the subscription scope, contact us for a quote."
+              },
+              {
+                question: "What's your cancellation policy?",
+                answer: "Subscriptions are monthly. Cancel anytime before the next billing cycle."
               }
             ].map((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`} className="border border-legal-soft bg-white rounded-lg px-6">
