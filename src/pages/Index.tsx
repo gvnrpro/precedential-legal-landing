@@ -15,7 +15,11 @@ import {
   MessageSquare,
   Search,
   Handshake,
-  Truck
+  Truck,
+  DollarSign,
+  Globe,
+  Zap,
+  Building
 } from "lucide-react";
 
 const Index = () => {
@@ -76,43 +80,43 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                icon: <Clock className="h-8 w-8 text-legal-accent" />,
-                title: "Unlimited Access",
-                description: "Get legal support whenever you need it, without watching the clock or worrying about billable hours."
+                icon: <MessageSquare className="h-8 w-8 text-legal-accent transition-all duration-300 group-hover:scale-110 group-hover:opacity-100 opacity-70" />,
+                title: "Unlimited Requests",
+                description: "Ask us anything, anytime."
               },
               {
-                icon: <Target className="h-8 w-8 text-legal-accent" />,
-                title: "Predictable Pricing",
-                description: "One fixed monthly fee covers all your business legal needs. No surprises, no hidden costs."
+                icon: <DollarSign className="h-8 w-8 text-legal-accent transition-all duration-300 group-hover:scale-110 group-hover:opacity-100 opacity-70" />,
+                title: "Flat-Fee Simplicity",
+                description: "No surprise billing."
               },
               {
-                icon: <Shield className="h-8 w-8 text-legal-accent" />,
-                title: "Expert Team",
-                description: "Access to experienced UAE-qualified lawyers who understand local business law inside and out."
+                icon: <Globe className="h-8 w-8 text-legal-accent transition-all duration-300 group-hover:scale-110 group-hover:opacity-100 opacity-70" />,
+                title: "Bilingual Service",
+                description: "English & Arabic support."
               },
               {
-                icon: <MessageSquare className="h-8 w-8 text-legal-accent" />,
-                title: "Rapid Response",
-                description: "Quick turnaround times on legal requests. Get answers when you need them, not weeks later."
+                icon: <FileText className="h-8 w-8 text-legal-accent transition-all duration-300 group-hover:scale-110 group-hover:opacity-100 opacity-70" />,
+                title: "Legal Documents",
+                description: "Contracts, memos, letters."
               },
               {
-                icon: <FileText className="h-8 w-8 text-legal-accent" />,
-                title: "Document Support",
-                description: "Contract reviews, legal documents, and compliance guidance all included in your subscription."
+                icon: <Zap className="h-8 w-8 text-legal-accent transition-all duration-300 group-hover:scale-110 group-hover:opacity-100 opacity-70" />,
+                title: "Fast Turnaround",
+                description: "We respond when it matters."
               },
               {
-                icon: <Scale className="h-8 w-8 text-legal-accent" />,
-                title: "Business Focus",
-                description: "Legal support tailored specifically for business operations, growth, and protection."
+                icon: <Building className="h-8 w-8 text-legal-accent transition-all duration-300 group-hover:scale-110 group-hover:opacity-100 opacity-70" />,
+                title: "Business-Focused",
+                description: "Built for UAE companies."
               }
             ].map((item, index) => (
-              <Card key={index} className="p-6 hover:shadow-lg transition-all duration-300 border-legal-soft/50">
+              <Card key={index} className="group p-8 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border-legal-soft/50 text-center md:text-left">
                 <CardContent className="p-0">
-                  <div className="mb-4">{item.icon}</div>
-                  <h3 className="text-xl font-semibold text-legal-primary mb-3">
+                  <div className="mb-6 flex justify-center md:justify-start">{item.icon}</div>
+                  <h3 className="text-xl font-bold text-legal-primary mb-3">
                     {item.title}
                   </h3>
                   <p className="text-legal-muted leading-relaxed">
