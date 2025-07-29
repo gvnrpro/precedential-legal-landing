@@ -197,68 +197,65 @@ const Index = () => {
         </div>
       </section>
 
-      {/* What's Included / Not Included */}
-      <section className="px-6 py-20 bg-background">
+      {/* Scope of Services */}
+      <section className="px-6 py-20 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-legal-primary mb-4">
-              What's Included
+              Scope of Services
             </h2>
             <p className="text-xl text-legal-muted">
-              Comprehensive legal support with clear boundaries
+              Comprehensive legal support designed for your business needs
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-12">
-            {/* Included */}
-            <div>
-              <h3 className="text-2xl font-semibold text-legal-primary mb-8 flex items-center">
-                <CheckCircle className="h-6 w-6 text-green-500 mr-3" />
-                Included Services
-              </h3>
-              <div className="space-y-4">
-                {[
-                  "Contract review and drafting",
-                  "Business compliance guidance",
-                  "Employment law support",
-                  "Intellectual property advice",
-                  "Corporate governance",
-                  "Regulatory compliance",
-                  "Legal document templates",
-                  "Risk assessment consultations"
-                ].map((item, index) => (
-                  <div key={index} className="flex items-center">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
-                    <span className="text-legal-primary">{item}</span>
-                  </div>
-                ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+            {[
+              {
+                icon: <CheckCircle className="h-6 w-6 text-legal-accent" />,
+                title: "Unlimited Contract Creation",
+                description: "Draft new legal agreements tailored to your needs."
+              },
+              {
+                icon: <FileText className="h-6 w-6 text-legal-accent" />,
+                title: "Unlimited Reviews & Revisions",
+                description: "Send any contract, we'll review and amend it."
+              },
+              {
+                icon: <MessageSquare className="h-6 w-6 text-legal-accent" />,
+                title: "Unlimited Legal Advice",
+                description: "Ask us anything related to business or corporate law."
+              },
+              {
+                icon: <Clock className="h-6 w-6 text-legal-accent" />,
+                title: "Fast Turnaround (1–3 Days)",
+                description: "Most requests are handled in 1–3 business days."
+              },
+              {
+                icon: <Globe className="h-6 w-6 text-legal-accent" />,
+                title: "Bilingual Legal Support",
+                description: "English and Arabic legal services available."
+              },
+              {
+                icon: <Shield className="h-6 w-6 text-legal-accent" />,
+                title: "Senior-Led Work",
+                description: "All requests reviewed by experienced legal professionals."
+              }
+            ].map((service, index) => (
+              <div key={index} className="flex items-start space-x-4">
+                <div className="flex-shrink-0 mt-1">
+                  {service.icon}
+                </div>
+                <div className="text-left">
+                  <h3 className="text-lg font-bold text-legal-primary mb-2">
+                    {service.title}
+                  </h3>
+                  <p className="text-legal-muted leading-relaxed">
+                    {service.description}
+                  </p>
+                </div>
               </div>
-            </div>
-
-            {/* Not Included */}
-            <div>
-              <h3 className="text-2xl font-semibold text-legal-primary mb-8 flex items-center">
-                <XCircle className="h-6 w-6 text-red-500 mr-3" />
-                Not Included
-              </h3>
-              <div className="space-y-4">
-                {[
-                  "Court representation",
-                  "Criminal law matters",
-                  "Family law cases",
-                  "Personal injury claims",
-                  "Immigration services",
-                  "Real estate transactions",
-                  "Bankruptcy proceedings",
-                  "Emergency legal services"
-                ].map((item, index) => (
-                  <div key={index} className="flex items-center">
-                    <XCircle className="h-5 w-5 text-red-500 mr-3 flex-shrink-0" />
-                    <span className="text-legal-muted">{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
