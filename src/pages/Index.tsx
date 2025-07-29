@@ -141,50 +141,58 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-4 gap-8">
-            {[
-              {
-                number: "01",
-                icon: <Search className="h-10 w-10 text-legal-accent" />,
-                title: "Inquiry",
-                description: "Submit your legal request through our intake form"
-              },
-              {
-                number: "02",
-                icon: <MessageSquare className="h-10 w-10 text-legal-accent" />,
-                title: "Consultation",
-                description: "Connect with our legal team for initial assessment"
-              },
-              {
-                number: "03",
-                icon: <FileText className="h-10 w-10 text-legal-accent" />,
-                title: "Request",
-                description: "Detailed legal work begins on your specific needs"
-              },
-              {
-                number: "04",
-                icon: <Truck className="h-10 w-10 text-legal-accent" />,
-                title: "Delivery",
-                description: "Receive comprehensive legal support and documentation"
-              }
-            ].map((step, index) => (
-              <div key={index} className="text-center">
-                <div className="relative mb-6">
-                  <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto shadow-md">
-                    {step.icon}
+          <div className="relative">
+            {/* Connector Line - Desktop only */}
+            <div className="hidden md:block absolute top-10 left-0 right-0 h-0.5 bg-legal-soft"></div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-4">
+              {[
+                {
+                  number: "01",
+                  icon: <Search className="h-8 w-8 text-legal-accent" />,
+                  title: "Submit Your Inquiry",
+                  description: "Use our intake form to tell us your needs."
+                },
+                {
+                  number: "02",
+                  icon: <Zap className="h-8 w-8 text-legal-accent" />,
+                  title: "We Respond Quickly",
+                  description: "Get a response same-day or next-day."
+                },
+                {
+                  number: "03",
+                  icon: <FileText className="h-8 w-8 text-legal-accent" />,
+                  title: "Request What You Need",
+                  description: "Contracts, legal opinions, letters, etc."
+                },
+                {
+                  number: "04",
+                  icon: <Truck className="h-8 w-8 text-legal-accent" />,
+                  title: "Delivered to You",
+                  description: "We send you complete documents or advice."
+                }
+              ].map((step, index) => (
+                <div key={index} className="relative text-center">
+                  {/* Step Circle */}
+                  <div className="relative mb-6 mx-auto">
+                    <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto shadow-md border-2 border-legal-soft relative z-10">
+                      {step.icon}
+                    </div>
+                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-legal-accent text-white rounded-full flex items-center justify-center text-sm font-bold z-20">
+                      {step.number}
+                    </div>
                   </div>
-                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-legal-accent text-white rounded-full flex items-center justify-center text-sm font-bold">
-                    {step.number}
-                  </div>
+                  
+                  {/* Content */}
+                  <h3 className="text-lg font-bold text-legal-primary mb-3">
+                    {step.title}
+                  </h3>
+                  <p className="text-legal-muted text-sm leading-relaxed max-w-xs mx-auto">
+                    {step.description}
+                  </p>
                 </div>
-                <h3 className="text-xl font-semibold text-legal-primary mb-3">
-                  {step.title}
-                </h3>
-                <p className="text-legal-muted">
-                  {step.description}
-                </p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
