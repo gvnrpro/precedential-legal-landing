@@ -25,6 +25,23 @@ import {
 const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-legal-soft">
+      {/* Header */}
+      <header className="px-6 py-4 bg-white border-b border-legal-soft">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
+          <div className="flex items-center space-x-2 mb-3 md:mb-0">
+            <Scale className="h-6 w-6 text-legal-accent" />
+            <span className="text-xl font-semibold text-legal-primary">Precedential.Legal</span>
+          </div>
+          
+          {/* Language Toggle */}
+          <div className="flex items-center space-x-1 text-sm" style={{ color: '#6B7280' }}>
+            <span className="font-medium text-legal-primary border-b border-legal-primary">EN</span>
+            <span className="mx-2">|</span>
+            <span className="hover:text-legal-primary transition-colors cursor-pointer">AR</span>
+          </div>
+        </div>
+      </header>
+      
       {/* Hero Section */}
       <section className="relative px-6 py-20 md:py-32 max-w-6xl mx-auto bg-white">
         <div className="max-w-3xl">
