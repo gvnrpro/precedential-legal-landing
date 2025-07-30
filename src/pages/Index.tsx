@@ -337,36 +337,25 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="px-6 py-12 bg-background border-t border-legal-soft">
+      <footer className="px-6 py-8 bg-white border-t" style={{ borderColor: '#E5E7EB' }}>
         <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
-            <div className="flex items-center space-x-8">
-              <div className="flex items-center space-x-2">
-                <Scale className="h-6 w-6 text-legal-accent" />
-                <span className="text-xl font-semibold text-legal-primary">Precedential.Legal</span>
-              </div>
-              <div className="hidden md:flex space-x-6 text-legal-muted">
-                <a href="#" className="hover:text-legal-primary transition-colors">Terms of Service</a>
-                <a href="#" className="hover:text-legal-primary transition-colors">Privacy Policy</a>
-              </div>
+          <div className="flex flex-col md:flex-row md:justify-between md:items-center space-y-4 md:space-y-0 text-sm" style={{ color: '#6B7280' }}>
+            {/* Copyright */}
+            <div className="text-center md:text-left">
+              © Precedential Legal Consultancy FZ-LLC. All rights reserved.
             </div>
             
-            <div className="flex items-center space-x-8">
-              <div className="text-legal-muted">
-                Email us at <a href="mailto:support@precedential.legal" className="text-legal-accent hover:underline">support@precedential.legal</a>
-              </div>
-              <div className="flex items-center space-x-2">
-                <button className="text-legal-primary font-medium hover:text-legal-accent transition-colors">EN</button>
-                <span className="text-legal-muted">|</span>
-                <button className="text-legal-muted hover:text-legal-primary transition-colors">AR</button>
-              </div>
+            {/* Language Toggle */}
+            <div className="flex justify-center md:justify-center">
+              <span className="font-medium">EN</span>
+              <span className="mx-2">|</span>
+              <span>AR</span>
             </div>
-          </div>
-          
-          <div className="flex md:hidden flex-col items-center space-y-4 mt-6 pt-6 border-t border-legal-soft">
-            <div className="flex space-x-6 text-legal-muted">
-              <a href="#" className="hover:text-legal-primary transition-colors">Terms of Service</a>
-              <a href="#" className="hover:text-legal-primary transition-colors">Privacy Policy</a>
+            
+            {/* Links */}
+            <div className="flex justify-center md:justify-end space-x-6">
+              <a href="#" className="hover:opacity-70 transition-opacity">Terms of Service</a>
+              <a href="#" className="hover:opacity-70 transition-opacity">Privacy Policy</a>
             </div>
           </div>
         </div>
