@@ -321,15 +321,15 @@ const Index = () => {
       </section>
 
       {/* Final CTA Section */}
-      <section className="px-6 py-20 bg-legal-primary text-white">
+      <section className="px-6 py-16 md:py-24 bg-legal-accent text-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            Start your legal subscription today
-          </h2>
-          <p className="text-xl mb-12 text-white/90 max-w-2xl mx-auto">
-            Join forward-thinking businesses who have chosen predictable, unlimited legal support over traditional hourly billing.
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            Start your legal subscription today.
+          </h1>
+          <p className="text-lg md:text-xl mb-12 text-white/90 max-w-2xl mx-auto font-medium">
+            Clarity. Speed. Expert legal support — for AED 5,000/month.
           </p>
-          <Button variant="secondary" size="lg" className="text-lg px-8 py-6 bg-white text-legal-primary hover:bg-white/90">
+          <Button variant="legal" size="lg" className="text-lg px-8 py-6 hover:brightness-110 hover:scale-105 transition-all duration-200">
             Get Started
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
