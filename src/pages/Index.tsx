@@ -24,17 +24,17 @@ import {
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background to-legal-soft">
+    <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="px-6 py-4 bg-white border-b border-legal-soft">
+      <header className="px-6 py-6 bg-white border-b border-legal-divider">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
-          <div className="flex items-center space-x-2 mb-3 md:mb-0">
+          <div className="flex items-center space-x-2 mb-4 md:mb-0">
             <Scale className="h-6 w-6 text-legal-accent" />
-            <span className="text-xl font-semibold text-legal-primary">Precedential.Legal</span>
+            <span className="text-xl font-semibold text-legal-primary font-heading">Precedential.Legal</span>
           </div>
           
           {/* Language Toggle */}
-          <div className="flex items-center space-x-1 text-sm" style={{ color: '#6B7280' }}>
+          <div className="flex items-center space-x-1 text-sm text-legal-muted">
             <span className="font-medium text-legal-primary border-b border-legal-primary">EN</span>
             <span className="mx-2">|</span>
             <span className="hover:text-legal-primary transition-colors cursor-pointer">AR</span>
@@ -43,19 +43,19 @@ const Index = () => {
       </header>
       
       {/* Hero Section */}
-      <section className="relative px-6 py-20 md:py-32 max-w-6xl mx-auto bg-white">
-        <div className="max-w-3xl">
-          <p className="text-legal-muted text-sm font-medium uppercase tracking-wider mb-6">
+      <section className="relative px-6 py-16 md:py-24 max-w-6xl mx-auto bg-white">
+        <div className="max-w-4xl">
+          <p className="text-legal-muted text-sm font-medium uppercase tracking-wider mb-8">
             A smarter way to access law.
           </p>
-          <h1 className="text-5xl md:text-7xl font-bold text-legal-primary mb-8 leading-tight">
+          <h1 className="text-h1 md:text-6xl font-bold text-legal-primary mb-8 leading-tight font-heading">
             Unlimited Legal Support for{' '}
             <span className="text-legal-accent">AED 5,000/month</span>
           </h1>
-          <p className="text-xl md:text-2xl text-legal-muted mb-16 leading-relaxed">
+          <p className="text-subhead text-legal-muted mb-12 leading-relaxed">
             No hourly billing. No uncertainty. Just clarity.
           </p>
-          <Button variant="cta" size="lg" className="text-lg px-8 py-6 sticky-cta md:relative">
+          <Button variant="cta" size="lg" className="text-lg sticky-cta md:relative">
             Get Started
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
@@ -63,7 +63,7 @@ const Index = () => {
       </section>
 
       {/* Silent Social Proof */}
-      <section className="px-6 py-16 border-t border-legal-soft">
+      <section className="px-6 py-16 bg-legal-soft border-t border-legal-divider">
         <div className="max-w-6xl mx-auto text-center">
           <p className="text-legal-muted text-sm font-medium mb-8">
             Trusted by UAE businesses
@@ -86,13 +86,13 @@ const Index = () => {
       </section>
 
       {/* Value Proposition */}
-      <section className="px-6 py-20 bg-background">
+      <section className="px-6 py-20 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-legal-primary mb-4">
+            <h2 className="text-h2 font-bold text-legal-primary mb-4 font-heading">
               Why Choose Precedential.Legal
             </h2>
-            <p className="text-xl text-legal-muted max-w-2xl mx-auto">
+            <p className="text-subhead text-legal-muted max-w-2xl mx-auto">
               Modern legal support designed for today's businesses
             </p>
           </div>
@@ -130,13 +130,13 @@ const Index = () => {
                 description: "Built for UAE companies."
               }
             ].map((item, index) => (
-              <Card key={index} className="group p-8 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border-legal-soft/50 text-center md:text-left">
+              <Card key={index} className="group p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border-legal-divider/50 text-center md:text-left">
                 <CardContent className="p-0">
-                  <div className="mb-6 flex justify-center md:justify-start">{item.icon}</div>
-                  <h3 className="text-xl font-bold text-legal-primary mb-3">
+                  <div className="mb-4 flex justify-center md:justify-start">{item.icon}</div>
+                  <h3 className="text-h3 font-bold text-legal-primary mb-3 font-heading">
                     {item.title}
                   </h3>
-                  <p className="text-legal-muted leading-relaxed">
+                  <p className="text-body text-legal-muted leading-relaxed">
                     {item.description}
                   </p>
                 </CardContent>
@@ -147,20 +147,20 @@ const Index = () => {
       </section>
 
       {/* How It Works */}
-      <section className="px-6 py-20 bg-legal-soft/30">
+      <section className="px-6 py-20 bg-legal-soft">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-legal-primary mb-4">
+            <h2 className="text-h2 font-bold text-legal-primary mb-4 font-heading">
               How It Works
             </h2>
-            <p className="text-xl text-legal-muted">
+            <p className="text-subhead text-legal-muted">
               Simple, transparent process from start to finish
             </p>
           </div>
           
           <div className="relative">
             {/* Connector Line - Desktop only */}
-            <div className="hidden md:block absolute top-10 left-0 right-0 h-0.5 bg-legal-soft"></div>
+            <div className="hidden md:block absolute top-10 left-0 right-0 h-0.5 bg-legal-divider"></div>
             
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-4">
               {[
@@ -192,7 +192,7 @@ const Index = () => {
                 <div key={index} className="relative text-center">
                   {/* Step Circle */}
                   <div className="relative mb-6 mx-auto">
-                    <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto shadow-md border-2 border-legal-soft relative z-10">
+                    <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto shadow-md border-2 border-legal-divider relative z-10">
                       {step.icon}
                     </div>
                     <div className="absolute -top-2 -right-2 w-8 h-8 bg-legal-accent text-white rounded-full flex items-center justify-center text-sm font-bold z-20">
@@ -201,10 +201,10 @@ const Index = () => {
                   </div>
                   
                   {/* Content */}
-                  <h3 className="text-lg font-bold text-legal-primary mb-3">
+                  <h3 className="text-h3 font-bold text-legal-primary mb-3 font-heading">
                     {step.title}
                   </h3>
-                  <p className="text-legal-muted text-sm leading-relaxed max-w-xs mx-auto">
+                  <p className="text-body text-legal-muted leading-relaxed max-w-xs mx-auto">
                     {step.description}
                   </p>
                 </div>
@@ -218,10 +218,10 @@ const Index = () => {
       <section className="px-6 py-20 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-legal-primary mb-4">
+            <h2 className="text-h2 font-bold text-legal-primary mb-4 font-heading">
               Scope of Services
             </h2>
-            <p className="text-xl text-legal-muted">
+            <p className="text-subhead text-legal-muted">
               Comprehensive legal support designed for your business needs
             </p>
           </div>
@@ -264,10 +264,10 @@ const Index = () => {
                   {service.icon}
                 </div>
                 <div className="text-left">
-                  <h3 className="text-lg font-bold text-legal-primary mb-2">
+                  <h3 className="text-h3 font-bold text-legal-primary mb-2 font-heading">
                     {service.title}
                   </h3>
-                  <p className="text-legal-muted leading-relaxed">
+                  <p className="text-body text-legal-muted leading-relaxed">
                     {service.description}
                   </p>
                 </div>
@@ -278,13 +278,13 @@ const Index = () => {
       </section>
 
       {/* FAQs */}
-      <section className="px-6 py-20 bg-legal-soft/30">
+      <section className="px-6 py-20 bg-legal-soft">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-legal-primary mb-4">
+            <h2 className="text-h2 font-bold text-legal-primary mb-4 font-heading">
               Frequently Asked Questions
             </h2>
-            <p className="text-xl text-legal-muted">
+            <p className="text-subhead text-legal-muted">
               Everything you need to know about our legal subscription service
             </p>
           </div>
@@ -324,11 +324,11 @@ const Index = () => {
                 answer: "Subscriptions are monthly. Cancel anytime before the next billing cycle."
               }
             ].map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`} className="border border-legal-soft bg-white rounded-lg px-6">
-                <AccordionTrigger className="text-left text-legal-primary font-semibold hover:text-legal-accent">
+              <AccordionItem key={index} value={`item-${index}`} className="border border-legal-divider bg-white rounded-lg px-6">
+                <AccordionTrigger className="text-left text-legal-primary font-semibold hover:text-legal-accent font-heading">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-legal-muted leading-relaxed">
+                <AccordionContent className="text-body text-legal-muted leading-relaxed">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
@@ -340,13 +340,13 @@ const Index = () => {
       {/* Final CTA Section */}
       <section className="px-6 py-16 md:py-24 bg-legal-accent text-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+          <h1 className="text-h1 md:text-6xl font-bold mb-6 font-heading">
             Start your legal subscription today.
           </h1>
-          <p className="text-lg md:text-xl mb-12 text-white/90 max-w-2xl mx-auto font-medium">
+          <p className="text-subhead mb-12 text-white/90 max-w-2xl mx-auto font-medium">
             Clarity. Speed. Expert legal support — for AED 5,000/month.
           </p>
-          <Button variant="legal" size="lg" className="text-lg px-8 py-6 hover:brightness-110 hover:scale-105 transition-all duration-200">
+          <Button variant="cta" size="lg" className="bg-white text-legal-accent hover:bg-white/90 hover:scale-105 transition-all duration-200">
             Get Started
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
@@ -354,9 +354,9 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="px-6 py-8 bg-white border-t" style={{ borderColor: '#E5E7EB' }}>
+      <footer className="px-6 py-8 bg-white border-t border-legal-divider">
         <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col md:flex-row md:justify-between md:items-center space-y-4 md:space-y-0 text-sm" style={{ color: '#6B7280' }}>
+          <div className="flex flex-col md:flex-row md:justify-between md:items-center space-y-4 md:space-y-0 text-sm text-legal-muted">
             {/* Copyright */}
             <div className="text-center md:text-left">
               © Precedential Legal Consultancy FZ-LLC. All rights reserved.

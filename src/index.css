@@ -9,21 +9,24 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Core Brand Colors */
-    --background: 0 0% 100%;
-    --foreground: 0 0% 7%;
+    /* Modern Color Palette */
+    --background: 210 20% 98%; /* #F9FAFB */
+    --foreground: 0 0% 7%; /* #111111 */
     
-    /* Legal Brand Palette */
-    --legal-primary: 0 0% 7%;
-    --legal-accent: 222 44% 15%;
-    --legal-soft: 210 20% 96%;
-    --legal-muted: 210 10% 65%;
+    /* Brand Colors */
+    --legal-primary: 0 0% 7%; /* #111111 */
+    --legal-accent: 222 44% 15%; /* #1A1A2F */
+    --legal-accent-hover: 222 32% 20%; /* #2C2C4B */
+    --legal-soft: 210 20% 96%; /* Light gray for sections */
+    --legal-muted: 210 10% 41%; /* #6B7280 */
+    --legal-divider: 210 16% 89%; /* #E5E7EB */
 
+    /* Component Tokens */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: var(--legal-primary);
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: var(--legal-primary);
 
     --primary: var(--legal-primary);
     --primary-foreground: 0 0% 98%;
@@ -37,36 +40,29 @@ All colors MUST be HSL.
     --accent: var(--legal-accent);
     --accent-foreground: 0 0% 98%;
     
-    /* Legal-specific design tokens */
-    --hero-gradient: linear-gradient(135deg, hsl(var(--background)), hsl(var(--legal-soft)));
-    --cta-gradient: linear-gradient(135deg, hsl(var(--legal-primary)), hsl(var(--legal-accent)));
+    /* Design System Tokens */
     --shadow-soft: 0 4px 20px -4px hsl(var(--legal-primary) / 0.1);
     --shadow-elevated: 0 8px 40px -8px hsl(var(--legal-primary) / 0.15);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
+    /* Default Shadcn Variables */
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: var(--legal-divider);
+    --input: var(--legal-divider);
+    --ring: var(--legal-primary);
 
-    --radius: 0.5rem;
+    --radius: 6px;
 
+    /* Sidebar Variables */
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -117,6 +113,43 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.5;
+  }
+  
+  /* Typography Scale */
+  h1, .text-h1 {
+    font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1.2;
+  }
+  
+  h2, .text-h2 {
+    font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.3;
+  }
+  
+  h3, .text-h3 {
+    font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.4;
+  }
+  
+  .text-subhead {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.5;
+  }
+  
+  .text-body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
   }
   
   /* Sticky CTA for mobile */

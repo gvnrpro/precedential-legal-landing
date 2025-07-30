@@ -20,7 +20,8 @@ export default {
 		extend: {
 			fontFamily: {
 				sans: ['Inter', 'system-ui', 'sans-serif'],
-				legal: ['Inter', 'system-ui', 'sans-serif'],
+				heading: ['IBM Plex Sans', 'system-ui', 'sans-serif'],
+				body: ['Inter', 'system-ui', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -30,8 +31,10 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				'legal-primary': 'hsl(var(--legal-primary))',
 				'legal-accent': 'hsl(var(--legal-accent))',
+				'legal-accent-hover': 'hsl(var(--legal-accent-hover))',
 				'legal-soft': 'hsl(var(--legal-soft))',
 				'legal-muted': 'hsl(var(--legal-muted))',
+				'legal-divider': 'hsl(var(--legal-divider))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
